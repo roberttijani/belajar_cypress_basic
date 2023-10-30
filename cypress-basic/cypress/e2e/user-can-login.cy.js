@@ -64,4 +64,16 @@ describe('User can login to system', () => {
       "The password field is required."
     );
   });
+
+  // it.only("user cannot login with epmty email and epmty password", () =>{
+  //   //arrange
+  //   cy.visit('http://127.0.0.1:8000/');
+  //   //act
+  //   cy.get('.btn').click();
+  //   //assert
+  //   cy.get('.invalid-feedback').should(
+  //     "have.text",
+  //     "The email field is required.",
+  //   );
+  // });
 })
