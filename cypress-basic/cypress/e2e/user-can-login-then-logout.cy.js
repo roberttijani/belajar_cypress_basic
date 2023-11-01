@@ -5,7 +5,7 @@ describe('User can login to system', () => {
     cy.get('[data-id="email"]').type("superadmin@gmail.com");
     cy.get('[data-id="password"]').type("password");
     cy.get('[data-id="submit"]').click();
-    cy.get('.navbar-right > :nth-child(2) > .nav-link').click();
-    cy.get('.text-danger').click();
+    cy.get('[data-id="username"]').click();
+    cy.get('[data-id="logout-btn"]').click();
   });
 })
