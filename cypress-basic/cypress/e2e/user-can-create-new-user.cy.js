@@ -3,6 +3,10 @@ describe('template spec', () => {
   it('user can create new user', () => {
     //arrange
     cy.visit('http://127.0.0.1:8000/');
+    //reset database using 
+    cy.exec(
+      "cd ../demo-app-cypress-automation && php artisan migrate:fresh --seed"
+    );
     //act
     cy.get(':nth-child(2) > .form-control').type('superadmin@gmail.com');
     cy.get(':nth-child(3) > .form-control').type('password');
